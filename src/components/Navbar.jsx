@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/logo.svg";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import HamburgerButton from "./HamburgerButton";
 
 const Navbar = () => {
@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <header className="h-20 w-full bg-neutral-100 shadow-md">
       <div className="h-full p-5 nav-wrapper flex items-center justify-between">
-        <img className="logo" src={logo} alt="Company logo" />
+        <Link to="/"><img className="logo" src={logo} alt="Company logo" /></Link>
         <HamburgerButton
           isOpen={hamburgerMenuIsOpen}
           setOpen={setHamburgerMenuIsOpen}
@@ -17,7 +17,7 @@ const Navbar = () => {
         <nav className="hidden sm:block">
           <ul className="flex items-center justify-between">
             <li className="mx-2">
-              <NavLink activeclassName={"bg-black"} to={"/"}>
+              <NavLink activeclassname={"bg-black"} to={"/"}>
                 Home
               </NavLink>
             </li>

@@ -12,6 +12,30 @@
   @apply max-h-20;
 }
 
+@keyframes scrollAnimation {
+  0% {
+    transform: translateY(-49%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.scrolling-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.scrolling-content {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 200%; /* Ensure this is double the height of the container to cover the duplicated content */
+  animation: scrollAnimation 15s linear infinite;
+}
+
+
+
 /* .logo {
   height: 6em;
   padding: 1.5em;
